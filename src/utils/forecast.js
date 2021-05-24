@@ -11,7 +11,7 @@ const forecast = (lat,long, callback)=>{
         }else if(body.error){
             callback("Unable to find location , Try anothe search", undefined)
         }else{
-            callback(undefined,body.current.weather_descriptions + ". Its is curerently "+body.current.temperature+" degree out. It feels like "+body.current.feelslike+" degree out.")
+            callback(undefined,body.current.weather_descriptions + ". Its is curerently "+body.current.temperature+" degree out. It feels like "+body.current.feelslike+" degree out."+"Humidity is "+body.current.humidity)
     }
     })
 
